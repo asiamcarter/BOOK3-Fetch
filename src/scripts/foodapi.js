@@ -4,15 +4,15 @@
 function foodHTML(name, type, ethnicity) {
 const section = document.createElement("section")
 const headSection = document.querySelector(".foodList");
-headSection.appendChild(section); 
+headSection.appendChild(section).classList.add("sec"); 
 
 const h1 = document.createElement("h1")
 const p1 = document.createElement("p")
 const p2 = document.createElement("p")
 
-headSection.appendChild(h1)
-headSection.appendChild(p1)
-headSection.appendChild(p2)
+section.appendChild(h1)
+section.appendChild(p1)
+section.appendChild(p2)
 
 h1.textContent = name
 p1.textContent = type
