@@ -2,12 +2,18 @@
 
 .foodList {
     display: flex; 
-    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: space-around;
+ 
    
 }
 
-section {
+.sec {
+    
     border: solid 1px;
+    margin: 10px 10px;
+    padding: 20px 20px;
+    flex-basis: 30%;
     
 }
 
