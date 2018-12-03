@@ -1,0 +1,13 @@
+
+
+.foodList {
+    display: flex; 
+    flex-direction: column-reverse;
+   
+}
+
+section {
+    border: solid 1px;
+    
+}
+
