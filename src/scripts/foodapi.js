@@ -1,30 +1,34 @@
 
-
-
-function foodHTML(name, type, ethnicity) {
-const section = document.createElement("section")
-const headSection = document.querySelector(".foodList");
-headSection.appendChild(section).classList.add("sec"); 
-
-const h1 = document.createElement("h1")
-const p1 = document.createElement("p")
-const p2 = document.createElement("p")
-
-section.appendChild(h1)
-section.appendChild(p1)
-section.appendChild(p2)
-
-h1.textContent = name
-p1.textContent = type
-p2.textContent = ethnicity
-}
-
-
-
 fetch("http://localhost:8088/food")
 .then(foods => foods.json())
 .then(parsedFoods => {
     parsedFoods.forEach(food => {
-        foodHTML(food.name, food.type, food.ethnicity)
+        const foodAsHTML = foodFactory(food)
+        addFoodToDom(foodAsHTML)
+        console.log(foodFactory(food));
     })
 })
+
+let foodFactory = (add) => {
+    return `
+    <div class = "foodPart">
+    <h3>${add.name}</h3>
+    <p>${add.type}</p>
+    <p>${add.ethnicity}</p>   
+    </div> 
+    `
+}
+
+let addFoodToDom = (foods) => {
+    let container = document.querySelector(".foodList");
+    container.innerHTML += foods;
+    document.body.appendChild(container);
+
+}
+
+
+
+
+
+
+
