@@ -5,7 +5,8 @@
       "name": "Linguine",
       "type": "pasta",
       "ethnicity": "italian",
-      "barcode": " 8076809523509"
+      "barcode": " 8076809523509",
+      
   },
   {
       "id": 2,
@@ -13,6 +14,7 @@
       "type": "curry",
       "ethnicity": "thai",
       "barcode": "3270160868681"
+
   },
   {
       "id": 3,
